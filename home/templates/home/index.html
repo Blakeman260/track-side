@@ -12,10 +12,7 @@
 {% block content %}
     <div class="container h-100">
         <div class="row h-100">
-
-        </div>
-        <div class="row h-100">
-            <div class="col col-6 my-auto">
+            <div class="col-12 col-md-6 my-auto">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -31,7 +28,7 @@
                         </div>
                         <div class="carousel-item">
                             <img src="https://live.staticflickr.com/65535/50394638532_0e265ac73e_k.jpg" class="d-block w-100" alt="ST225">
-                        </div>
+                        </div>                       
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -43,12 +40,36 @@
                     </button>
                 </div>
             </div>
-            <div class="col-6 my-auto">
-                <div class="my-5">
+            <div class="col-12 col-md-6 my-auto">
+                <div class="my-5 position-relative">
                     <h4>
-                        <a href="#" class="shop-now btn btn-lg rounded-0 text-uppercase py-3">Enter the Shop here!</a>
+                        <a href="#" class="shop-now btn btn-warning text-uppercase py-3 position-absolute top-50 start-50 translate-middle">Enter the Shop here!</a>
                     </h4>
                 </div>
+            </div>
+        </div>
+        <!-- Full size view -->
+        <div class="row h-200 py-5 d-none d-lg-block">
+            <div class="col-12 try-track text-center text-white my-auto rounded-pill bg-dark">
+                Not quite ready to dive in and purchase your own track car? 
+                <br><br>
+                No problem, here at TRACK SIDE, we offer a rental service, where you can experience a track day before buying your own!
+                <br><br>
+                <a href="#" class="text-white">
+                    Click on HERE for more information!
+                </a>
+            </div>
+        </div>
+        <!-- smaller than large -->
+        <div class="row h-200 py-5 d-block d-lg-none">
+            <div class="col-12 try-track text-center text-white bg-dark">
+                Not quite ready to dive in and purchase your own track car? 
+                <br><br>
+                No problem, here at TRACK SIDE, we offer a rental service, where you can experience a track day before buying your own!
+                <br><br>
+                <a href="#">
+                    Click on HERE for more information!
+                </a>
             </div>
         </div>
     </div>

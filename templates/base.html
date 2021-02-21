@@ -35,26 +35,24 @@
     </head>
     <body>
         <header class="container-fluid fixed-top header-container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <div class="row">
+                    <div>
                         <a href="#" class="nav-link main-logo-link">
                             <h1 class="logo-font text-white my-0"><strong>TRACK SIDE</strong></h1>
                         </a>
                     </div>
-                    <div class="row">
-                        <a href="#" class="nav-link main-logo-link">
-                            <h2 class="logo-font text-white my-0">For everything your race car desires</h2>
-                        </a>
-                    </div>
                 </div>
-                <div class="container-fluid col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <a class="navbar-brand" href="#">Home</a>
+                <div class="container-fluid col-12 col-lg-5 my-auto py-1 py-lg-0 text-center center">
+                    
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Shop - Choose your car
@@ -74,7 +72,49 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-white nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="" class="dropdown-item">Product Management</a>
+                                    {% endif %}
+                                    <a href="" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+            <!--
+            <div class="row container-fluid subtitle">
+                <h2 class=" text-black my-auto text-center background-white fst-italic">For everything your race car desires</h2>
+            </div>-->
         </header>
 
         {% if messages %}
@@ -83,9 +123,10 @@
 
         {% block page_header %}
         {% endblock %}
-
+        <section class="main-section">
         {% block content %}
         {% endblock %}
+        </section>
 
         {% block postloadjs %}
         {% endblock %}

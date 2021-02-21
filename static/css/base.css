@@ -5,5 +5,35 @@ html {
 body {
     background: url('/media/header.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 200px);
+}
+
+.subtitle {
+    background: white;
+}
+
+.border-dark {
+    border-width: 5px;
+}
+
+.text-white {
+    color: rgb(255, 255, 255) !important;
+}
+
+.try-track {
+    font-size: 1.5rem;
+}
+
+.main-section{
+    margin-top: 200px;
+}
+
+@media (max-width: 991px){
+.main-section{
+    margin-top: 250px;
+}
+
+.try-track {
+    font-size: 0.8rem;
+}
 }
