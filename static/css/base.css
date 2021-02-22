@@ -28,6 +28,16 @@ body {
     margin-top: 200px;
 }
 
+.overlay{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgb(122, 122, 122);
+    z-index: -1;
+}
+
 @media (max-width: 991px){
 .main-section{
     margin-top: 250px;
