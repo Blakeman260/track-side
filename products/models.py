@@ -29,3 +29,11 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Fitment(models.Model):
+
+    fitment = models.CharField(max_length=254, blank='universal')
+
+    def __str__(self):
+        return self.fitment
