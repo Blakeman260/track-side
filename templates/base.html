@@ -36,15 +36,14 @@
     <body>
         <header class="container-fluid fixed-top header-container">
             <nav class="row navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <div>
                         <a href="{% url 'home' %}" class="nav-link main-logo-link">
                             <h1 class="logo-font text-white my-0"><strong>TRACK SIDE</strong></h1>
                         </a>
                     </div>
                 </div>
-                <div class="container-fluid col-12 col-lg-5 my-auto py-1 py-lg-0 text-center center">
-                    
+                <div class="container-fluid col-12 col-lg-6 my-auto py-1 py-lg-0 text-center center">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -68,11 +67,13 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Try a Track day!</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="#">Contact us!</a>
                             </li>
+                            <!-- Search bar-->
+                            <form class="d-flex" method="GET" action="{% url 'products' %}">
+                                <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-light" type="submit">Search</button>
+                            </form>
                         </ul>
                     </div>
                 </div>
