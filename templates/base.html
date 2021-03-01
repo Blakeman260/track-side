@@ -57,13 +57,13 @@
                                     Shop - Choose your car
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Fiesta ST150</a></li>
-                                    <li><a class="dropdown-item" href="#">Focus ST170</a></li>
-                                    <li><a class="dropdown-item" href="#">Fiesta ST180</a></li>
-                                    <li><a class="dropdown-item" href="#">Mondeo ST220</a></li>
-                                    <li><a class="dropdown-item" href="#">Focus ST225</a></li>
-                                    <li><a class="dropdown-item" href="#">Universal Fitting</a></li>
-                                    <li><a class="dropdown-item" href="{% url 'products' %}">All Products</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'products' %}?category=fiestast150">Fiesta ST150</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'products' %}?category=focusst170">Focus ST170</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'products' %}?category=fiestast180">Fiesta ST180</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'products' %}?category=mondeost220">Mondeo ST220</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'products' %}?category=focusst225">Focus ST225</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'products' %}?category=universal">Universal Fitting</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'products' %}?category=fiestast150,focusst170,fiestast180,mondeost220,focusst225,universal">All Products</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
