@@ -38,6 +38,41 @@ body {
     z-index: -1;
 }
 
+/* ------ Toasts*/
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.success-msg {
+    color: green;
+}
+
+.error-msg {
+    color: rgb(255, 10, 10);
+}
+
+.warning-msg {
+    color: rgb(255, 166, 0);
+}
+
+.notice-msg {
+    color: rgb(0, 126, 245);
+}
+
+/*------ Media queries*/
+
 @media (max-width: 991px){
 .main-section{
     margin-top: 250px;
