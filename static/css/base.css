@@ -71,6 +71,15 @@ body {
     color: rgb(0, 126, 245);
 }
 
+.items-wrapper{
+    height: 120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.toast-checkout{
+    position: center;
+}
 /*------ Media queries*/
 
 @media (max-width: 991px){
