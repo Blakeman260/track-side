@@ -34,8 +34,17 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: rgb(177, 177, 177);
+    background: rgb(75, 75, 75);
     z-index: -1;
+}
+
+.product-details-container{
+    background: rgb(196, 196, 196);
+    padding: 10px;
+}
+
+.shopping-bag{
+    background: rgb(196, 196, 196);
 }
 
 /* ------ Toasts*/
