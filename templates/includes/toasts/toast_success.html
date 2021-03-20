@@ -29,7 +29,7 @@
             <div class="col position-relative pb-4 mb-1">
                 <strong><p class="toast-header">
                     Total: 
-                    <span class="float-right">${{ grand_total|floatformat:2 }}</span>
+                    <span class="float-right">£{{ grand_total|floatformat:2 }}</span>
                 </p></strong>
                 <a href="{% url 'view_bag' %}" class="btn btn-outline-success toast-checkout position-absolute bottom-0 start-50 translate-middle-x">
                     <span class="text-uppercase">Go To Checkout</span>
@@ -41,6 +41,3 @@
         </div>
     {% endif %}
 </div>
-
-
-Total: ${{ grand_total|floatformat:2 }}
