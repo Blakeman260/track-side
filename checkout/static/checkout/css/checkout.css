@@ -6,3 +6,20 @@
 .order-summary{
     background: white;
 }
+
+  
+.StripeElement,
+.stripe-style-input {
+  height: 40px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}
