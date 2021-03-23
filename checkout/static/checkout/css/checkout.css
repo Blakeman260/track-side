@@ -7,6 +7,9 @@
     background: white;
 }
 
+.checkoutsuccess{
+    background: rgb(196, 196, 196);
+}
   
 .StripeElement,
 .stripe-style-input {
