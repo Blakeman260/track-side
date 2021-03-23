@@ -63,12 +63,12 @@ def adjust_bag(request, item_id):
 
     if vehicle:
         if quantity > 0:
-            bag[item_id]['items_by_size'][vehicle] = quantity
+            bag[item_id]['items_by_vehicle'][vehicle] = quantity
             messages.success(
                 request, f'Updated {product.name} for {vehicle.upper()} quantity to {bag[item_id]["items_by_vehicle"][vehicle]}')
         else:
-            del bag[item_id]['items_by_size'][vehicle]
-            if not bag[item_id]['items_by_size']:
+            del bag[item_id]['items_by_vehicle'][vehicle]
+            if not bag[item_id]['items_by_vehicle']:
                 bag.pop(item_id)
                 messages.success(
                     request, f'Removed {product.name} for {vehicle.upper()} from your Shopping bag!') 
@@ -97,7 +97,7 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
 
         if vehicle:
-            del bag[item_id]['items_by_size'][vehicle]
+            del bag[item_id]['items_by_vehicle'][vehicle]
             if not bag[item_id]['items_by_size']:
                 bag.pop(item_id)
                 messages.success(
