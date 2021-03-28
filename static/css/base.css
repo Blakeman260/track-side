@@ -8,6 +8,13 @@ body {
     height: calc(100vh - 200px);
 }
 
+hr { 
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+} 
+
 .subtitle {
     background: white;
 }
@@ -44,6 +51,10 @@ body {
 }
 
 .shopping-bag{
+    background: rgb(196, 196, 196);
+}
+
+.formbase{
     background: rgb(196, 196, 196);
 }
 
