@@ -45,6 +45,13 @@ This is how I originally intended for my website to look:
 
 In the beginning, I wanted to include various other services within the website, including a forum, in which people could leave reviews on the products, so other users could see, along with renting and buying track cars.
 
+This is how it actually looks: 
+
+<img src="/media/index_page.png" alt="Base page" style="max-width:100%;">
+
+
+After entering the shop, this is how I wanted it to be:
+
 <img src="/media/Shop_Front.png" alt="Base page" style="max-width:100%;">
 
 I also wanted to include picture links, but after toying with the idea, it wouldn't of worked very well on mobile views, so this is why I went for the menu choice below.
@@ -66,5 +73,35 @@ The actual product detail page didn't vary that much from the initial design, th
 
 Actual:
 <img src="/media/product_detail.png" alt="Base page" style="max-width:100%;">
+
+
+### Features 
+Home page - 
+On the home page, it includes a few features that are carried out through out all the other pages, as the header and footer is on all the pages.
+
+- header
+    - Home button (including the TRACK-SIDE logo)
+    - Shop - You can choose the category between different cars to narrow down the specific products
+    - Search bar - enabling the user to quickly search for products that are Specified_car_product_list
+    - My account - allows users to do the following:
+        - Log in / out
+        - register for an account
+        - click onto their own profile
+        ( if a super user)
+        - click on product management and add products to the database
+    - Shopping bag - takes the users to their shopping bag
+    - Messages appear in the top right, notifying the user of different things happening
+<img src="/media/success_message.png" alt="Base page" style="max-width:100%;">
+
+- Body of the index page
+    - The home page itself includes a carousel of track cars (that we supply parts for) on the track, so when the customer arrives on the website straight away, they already know they're in the right place, when looking for performance parts.
+
+- footer
+ - Gives the user the ability to click on the social media accounts and follow them
+
+
+Other features when viewing products
+    - Can click on the menu on home page and take them to products directly listed with the vehicle they're after
+    
 
 
