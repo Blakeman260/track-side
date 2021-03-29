@@ -1,1 +1,1 @@
-web: gunicorn track-side.wsgi:application
+web: gunicorn track_side.wsgi:application
