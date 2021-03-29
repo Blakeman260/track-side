@@ -3,18 +3,22 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-            </div>
-        </div>
-    </div>
     <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                <div class="row col-12 mb-5">
+
+                    <div class="d-grid gap-2 col-4 mx-auto">
+                        {% for c in current_categories %}
+                            <a class="btn btn-outline-light btn-sm text-center" href="{% url 'products' %}?category={{ c.name }}">
+                                <h2 class="">{{ c.friendly_name }}</h2>
+                            </a>
+                        {% endfor %}
+                    
+                    </div>
+                </div>
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                             <div class="card h-100 border-0">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
