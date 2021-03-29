@@ -1,3 +1,5 @@
+/* ------ main base */
+
 html {
     height: 100%;
 }
@@ -33,6 +35,7 @@ hr {
 
 .main-section{
     margin-top: 150px;
+    padding-bottom : 100px;
 }
 
 .overlay{
@@ -45,23 +48,31 @@ hr {
     z-index: -1;
 }
 
+/* ------ product details */
+
 .product-details-container{
     background: rgb(196, 196, 196);
     padding: 10px;
 }
 
+/* ------ Shopping bag*/
+
 .shopping-bag{
     background: rgb(196, 196, 196);
 }
 
+/* ------ Form inputs*/
+
 .formbase{
     background: rgb(196, 196, 196);
 }
+/* ------ Adding product*/
 
 .addproduct{
     background: rgb(196, 196, 196);
     width: 50%;
 }
+
 /* ------ Toasts*/
 
 .message-container {

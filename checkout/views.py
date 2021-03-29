@@ -17,6 +17,9 @@ import stripe
 import json
 
 
+""" Keeping the bag incase payment isn't successful """
+
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -32,6 +35,11 @@ def cache_checkout_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+
+
+"""
+For taking money via stripe, note user doesn't have to be logged in
+"""
 
 
 def checkout(request):
