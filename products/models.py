@@ -21,7 +21,9 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
+    """ fitment's include Brake upgrades, engine parts, seats etc """
     fitment = models.CharField(max_length=254, blank='universal')
+    """ Vehicle - if product is listed universal is it still specific to a model """
     vehicle = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
