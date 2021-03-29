@@ -27,7 +27,7 @@ SECRET_KEY = 'y9d@v&(wk*#f322--$)m^)!st(brk57$xkv5e5zz%&)(94__1s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['track-side.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -111,12 +111,17 @@ WSGI_APPLICATION = 'track_side.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 #DATABASES = {
     #'default': dj_database_url.parse('postgres://xnftlbrlfwlqsv:81840cff5273ecdd8de9d66e87e0744d2f686edca7f688d13c0c4560d7d67c81@ec2-54-247-158-179.eu-west-1.compute.amazonaws.com:5432/d5iqv8jh8pgn2a')
