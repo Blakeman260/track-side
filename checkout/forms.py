@@ -27,6 +27,7 @@ class OrderForm(forms.ModelForm):
             'county': 'County',
         }
 
+        """ Gives set list of countries to chose from """
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':

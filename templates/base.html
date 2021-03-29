@@ -111,9 +111,6 @@
                                     <li><a class="dropdown-item" href="{% url 'products' %}?category=fiestast150,focusst170,fiestast180,mondeost220,focusst225,universal">All Products</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact us!</a>
-                            </li>
                             <!-- Search bar-->
                             <form class="d-flex" method="GET" action="{% url 'products' %}">
                                 <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
@@ -200,4 +197,15 @@
         </script>
         {% endblock %}
     </body>
+    <footer class="container-fluid mt-2">
+        <nav class="row navbar navbar-expand-lg navbar-dark bg-dark text-white text-center">
+            <div class="col-12">
+            Don't forget to follow us on Social Media!
+            <a href="https://www.instagram.com/igt_tc/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCwJDkxK_xBOQoiUfnDRY_8w" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+            </div>
+        </nav>
+    </footer>
 </html>

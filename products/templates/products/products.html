@@ -6,14 +6,12 @@
     <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row col-12 mb-5">
-
                     <div class="d-grid gap-2 col-4 mx-auto">
                         {% for c in current_categories %}
                             <a class="btn btn-outline-light btn-sm text-center" href="{% url 'products' %}?category={{ c.name }}">
                                 <h2 class="">{{ c.friendly_name }}</h2>
                             </a>
                         {% endfor %}
-                    
                     </div>
                 </div>
                 <div class="row">
